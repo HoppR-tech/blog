@@ -10,4 +10,4 @@ published: true
 authorId: 1
 ---
 
-![La team HoppR au DevFest](/public/blogs-img/Photo_Groupe_DevFest)
+![La team HoppR au DevFest](/public/blogs-img/photo_hoppr_devfest_2024.jpg)
