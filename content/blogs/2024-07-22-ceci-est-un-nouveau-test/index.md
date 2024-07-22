@@ -36,7 +36,7 @@ Officia et eum qui aut quisquam esse dolorum itaque corporis hic assumenda et re
 
 
 
-![](./content/blogs/2024-07-22-ceci-est-un-nouveau-test/assets/photo-1620121478247-ec786b9be2fa?ixlib=rb-4.0.webp)
+![](./assets/photo-1620121478247-ec786b9be2fa?ixlib=rb-4.0.webp)
 
 ## Subtitle 2
 
