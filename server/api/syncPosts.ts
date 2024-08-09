@@ -1,6 +1,7 @@
 import { defineEventHandler } from 'h3'
 import { fetchPostsToPublishFromNotion } from '@/server/services/notionService'
-import { publishPostToGitHub } from '@/server/services/githubService'
+import { GitHubService } from '@/server/services/github/githubService'
+import { getOctokit } from '@/server/services/github/octokitClient'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -9,7 +10,10 @@ export default defineEventHandler(async (event) => {
     if (postsToPublish.length === 0)
       return { message: 'No articles to publish.' }
 
-    await Promise.all(postsToPublish.map(post => publishPostToGitHub(post)))
+    const octokit = await getOctokit(52971414)
+    const githubService = new GitHubService(octokit)
+
+    await Promise.all(postsToPublish.map(post => githubService.publishPostToGitHub(post)))
 
     return { posts: postsToPublish, message: '✅ Articles successfully published on GitHub' }
   }
